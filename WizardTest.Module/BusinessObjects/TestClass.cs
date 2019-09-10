@@ -1,14 +1,6 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-using DevExpress.Xpo;
-using DevExpress.ExpressApp;
+﻿using DevExpress.Xpo;
 using System.ComponentModel;
-using DevExpress.ExpressApp.DC;
-using DevExpress.Data.Filtering;
 using DevExpress.Persistent.Base;
-using System.Collections.Generic;
-using DevExpress.ExpressApp.Model;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
 
@@ -31,11 +23,11 @@ namespace WizardTest.Module.BusinessObjects
             base.AfterConstruction();
             // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
         }
-        private string _PropertyName;
+   
         private string _page2;
         private string _page1;
 
-        public string Page1
+        public string FirstField
         {
             get { return _page1; }
             set
@@ -44,7 +36,7 @@ namespace WizardTest.Module.BusinessObjects
             }
         }
         [RuleRequiredField]
-        public string Page2
+        public string SecondFieldRequired
         {
             get { return _page2; }
             set
